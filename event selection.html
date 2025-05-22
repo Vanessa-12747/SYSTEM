@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Event</title>
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\WEBSITE\style.css">
+    <style>
+        body { font-family: Arial; background-color: #f4f4f4; padding: 40px; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input, textarea, select { width: 100%; padding: 8px; }
+        button { padding: 10px 15px; background: #007bff; color: white; border: none; }
+        .confirmation-message { margin-top: 20px; padding: 15px; background: #e1ffe1; border: 1px solid #a1e3a1; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Victoria University Exhibition Ticket Booking</h1>
+        <nav>
+            <a href="index .html">Home</a>
+            <a href="event selection.html">Select Event</a>
+            <a href="ticket.html">Your Ticket</a>
+        </nav>
+    </header>
+    
+</head>
+<body>
+    <header>
+        <h2>Victoria University Exhibition Ticket Booking</h2>
+    </header>
+<form method="POST" action="">
+    <div class="form-group">
+        <label for="guest-name">Guest Name:</label>
+        <input type="text" id="guest-name" name="guest_name" required>
+    </div>
+
+</form>
+
+
+    <main>
+        <section class="booking-section">
+            <h2>Book Your Ticket</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="guest-name">Guest Name:</label>
+                    <input type="text" id="guest-name" name="guest-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-email">Email:</label>
+                    <input type="email" id="guest-email" name="guest-email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-id">Guest ID (Auto-generated):</label>
+                    <input type="text" id="guest-id" name="guest-id" placeholder="Auto-generated" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="affiliation">Affiliation:</label>
+                    <input type="text" id="affiliation" name="affiliation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event">Select Event:</label>
+                    <select id="event" name="event" required>
+                        <option value="">--Select Event--</option>
+                        <option value="science-exhibition">Science and Technology Exhibition</option>
+                        <option value="innovation-workshop">Workshop on Innovation</option>
+                        <option value="keynote-session">Keynote Session</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exhibition-title">Title of the Exhibition:</label>
+                    <input type="text" id="exhibition-title" name="exhibition-title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exhibition-type">Type of Exhibition:</label>
+                    <select id="exhibition-type" name="exhibition-type" required>
+                        <option value="">--Select Exhibition Type--</option>
+                        <option value="project-showcase">Project Showcase</option>
+                        <option value="research">Research</option>
+                        <option value="keynote">Keynote</option>
+                        <option value="session">Session</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time-slot">Time Slot:</label>
+                    <select id="time-slot" name="time-slot" required>
+                        <option value="">--Select Time Slot--</option>
+                        <option value="morning">Morning (10:00 AM - 12:00 PM)</option>
+                        <option value="afternoon">Afternoon (1:00 PM - 3:00 PM)</option>
+                        <option value="evening">Evening (4:00 PM - 6:00 PM)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="seating-area">Seating Area:</label>
+                    <select id="seating-area" name="seating-area" required>
+                        <option value="">--Select Seating Area--</option>
+                        <option value="front">Front Section</option>
+                        <option value="middle">Middle Section</option>
+                        <option value="balcony">Balcony Section</option>
+                        <option value="vip">VIP Box</option>
+                                        </select>
+            </div>
+
+            <div class="form-group">
+                <label for="seat-number">Desired Seat Number:</label>
+                <input type="text" id="seat-number" name="seat-number" placeholder="Available Seat Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="special-request">Special Requests or Comments:</label>
+                <textarea id="special-request" name="special-request" rows="3"></textarea>
+            </div>
+
+            <button type="submit">Book Ticket</button>
+            <div class="confirmation-message" id="confirmation-message" style="display:none;"></div>
+        </form>
+
+        <div class="report-section">
+            <h3>Report Sessions Attended by Guest</h3>
+            <p>Guest Name: <span id="attended-guest-name"></span></p>
+            <p>Sessions Attended: <span id="attended-sessions"></span></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Victoria University. All rights reserved.</p>
+</footer>
+
+
